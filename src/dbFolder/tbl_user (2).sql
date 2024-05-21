@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2024 at 08:54 AM
+-- Generation Time: May 10, 2024 at 10:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,20 +33,23 @@ CREATE TABLE `tbl_user` (
   `u_lname` varchar(50) NOT NULL,
   `u_email` varchar(50) NOT NULL,
   `u_username` varchar(50) NOT NULL,
-  `u_password` varchar(50) NOT NULL,
+  `u_password` varchar(150) NOT NULL,
   `u_type` varchar(50) NOT NULL,
-  `u_status` varchar(50) NOT NULL
+  `u_status` varchar(50) NOT NULL,
+  `u_image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`u_id`, `u_fname`, `u_lname`, `u_email`, `u_username`, `u_password`, `u_type`, `u_status`) VALUES
-(1001, 'Joel', 'Villarasa', 'ed@joel.com', 'joeled69', '1234', 'Admin', 'Active'),
-(1002, 'ed', 'babon', 'ed@babon.com', 'edbabon1', '12345', 'Admin', 'Active'),
-(1003, 'test', 'test', 'test', 'test', 'test', 'Admin', 'Pending'),
-(1004, 'test', 'test', 'test', 'test', 'test', 'Admin', 'Pending');
+INSERT INTO `tbl_user` (`u_id`, `u_fname`, `u_lname`, `u_email`, `u_username`, `u_password`, `u_type`, `u_status`, `u_image`) VALUES
+(1, 'Leo Adnmin', 'test', 'leo@test', 'adminleo', '4k35IAeMPdTn6NJELwDlyasqIxuzkY1lzFCQbknsrvQ=', 'Admin', 'Active', ''),
+(9, 'Leo User', 'test', 'test@test', 'userleo', '4k35IAeMPdTn6NJELwDlyasqIxuzkY1lzFCQbknsrvQ=', 'User', 'Active', ''),
+(10, 'maxtest', 'maxmax', 'max@test', 'testmax', '4k35IAeMPdTn6NJELwDlyasqIxuzkY1lzFCQbknsrvQ=', 'User', 'Pending', ''),
+(12, 'leo', 'leo', 'leo@leo', 'leos', '4k35IAeMPdTn6NJELwDlyasqIxuzkY1lzFCQbknsrvQ=', 'User', 'Actice', ''),
+(13, 'kyla', 'kyla', 'kyla@kyla', 'kyla', '4k35IAeMPdTn6NJELwDlyasqIxuzkY1lzFCQbknsrvQ=', 'User', 'Active', ''),
+(14, 'meee', 'meee', 'meeee', 'meeee', 'testtest', 'Admin', 'Active', '');
 
 --
 -- Indexes for dumped tables
@@ -66,7 +69,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1005;
+  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
